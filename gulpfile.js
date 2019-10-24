@@ -185,7 +185,8 @@ gulp.task('bundle-css', function (done) {
       'src/scss/treepath.scss',
       'src/scss/statusbar.scss',
       'src/scss/navigationbar.scss',
-      'src/js/assets/selectr/selectr.scss'
+      'src/js/assets/selectr/selectr.scss',
+      'node_modules/@fortawesome/fontawesome-free/css/all.min.css'
     ])
     .pipe(
       sass({
