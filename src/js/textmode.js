@@ -114,6 +114,20 @@ textmode.create = function (container, options = {}) {
     this.menu.className = 'jsoneditor-menu'
     this.frame.appendChild(this.menu)
 
+    // create clear
+    const buttonClear = document.createElement('button')
+    buttonClear.type = 'button'
+    buttonClear.className = 'jsoneditor-clear fas fa-trash-alt'
+    buttonClear.title = 'Leert die Daten'
+    this.menu.appendChild(buttonClear)
+    buttonClear.onclick = () => {
+      try {
+        me._setText({})
+      } catch (err) {
+        me._onError(err)
+      }
+    }
+
     // create format button
     const buttonFormat = document.createElement('button')
     buttonFormat.type = 'button'

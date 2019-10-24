@@ -22,11 +22,10 @@
   padding: 0;
   border-radius: 2px;
   border: 1px solid transparent;
-  background: transparent url('./img/jsoneditor-icons.svg');
   color: $jse-white;
   opacity: 0.8;
 
-  font-family: $jse-font;
+  font-family: 'FontAwesome';
   font-size:  $jse-font-size;
 
   float: left;
