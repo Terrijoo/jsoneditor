@@ -25,7 +25,7 @@
  *
  * @author  Jos de Jong, <wjosdejong@gmail.com>
  * @version 7.2.0
- * @date    2019-10-24
+ * @date    2019-10-25
  */
 
 (function webpackUniversalModuleDefinition(root, factory) {

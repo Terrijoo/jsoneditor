@@ -191,6 +191,9 @@ gulp.task('bundle-css', function (done) {
     .pipe(
       sass({
         // importer: tildeImporter
+        includePaths: [
+         'node_modules'
+        ]
       })
     )
     .pipe(concatCss(NAME + '.css'))
