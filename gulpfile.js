@@ -185,17 +185,12 @@ gulp.task('bundle-css', function (done) {
       'src/scss/treepath.scss',
       'src/scss/statusbar.scss',
       'src/scss/navigationbar.scss',
+      'src/scss/fontawesome.scss',
       'src/js/assets/selectr/selectr.scss',
-      'node_modules/@fortawesome/fontawesome-free/css/all.min.css'
     ])
     .pipe(
       sass({
         // importer: tildeImporter
-        includePaths: [
-         'node_modules/@fortawesome/fontawesome-free',
-         'node_modules/@fortawesome/fontawesome-free/css',
-         'node_modules/@fortawesome/fontawesome-free/webfonts'
-        ]
       })
     )
     .pipe(concatCss(NAME + '.css'))
@@ -205,6 +200,11 @@ gulp.task('bundle-css', function (done) {
     .pipe(gulp.dest(DIST))
   done()
 })
+
+gulp.task('icons', function() {
+  return gulp.src('node_modules/@fortawesome/fontawesome-free/webfonts/*')
+    .pipe(gulp.dest(DIST + '/assets/webfonts/'));
+});
 
 // create a folder img and copy the icons
 gulp.task('copy-img', function (done) {
@@ -249,6 +249,7 @@ gulp.task('default', gulp.series(
     'copy-img',
     'copy-docs',
     'bundle-css',
+    'icons',
     gulp.series('bundle', 'minify'),
     gulp.series('bundle-minimalist', 'minify-minimalist')
   )
