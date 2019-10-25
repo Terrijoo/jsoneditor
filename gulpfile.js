@@ -194,10 +194,10 @@ gulp.task('bundle-css', function (done) {
       })
     )
     .pipe(concatCss(NAME + '.css'))
-    .pipe(gulp.dest(DIST))
+    .pipe(gulp.dest(DIST + '/assets'))
     .pipe(concatCss(NAME + '.min.css'))
     .pipe(minifyCSS())
-    .pipe(gulp.dest(DIST))
+    .pipe(gulp.dest(DIST + '/assets'))
   done()
 })
 
