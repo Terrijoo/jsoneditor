@@ -192,7 +192,9 @@ gulp.task('bundle-css', function (done) {
       sass({
         // importer: tildeImporter
         includePaths: [
-         'node_modules'
+         'node_modules/@fortawesome/fontawesome-free',
+         'node_modules/@fortawesome/fontawesome-free/css',
+         'node_modules/@fortawesome/fontawesome-free/webfonts'
         ]
       })
     )
