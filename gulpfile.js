@@ -203,7 +203,7 @@ gulp.task('bundle-css', function (done) {
 
 gulp.task('icons', function() {
   return gulp.src('node_modules/@fortawesome/fontawesome-free/webfonts/*')
-    .pipe(gulp.dest(DIST + '/assets/webfonts/'));
+    .pipe(gulp.dest(DIST + '/webfonts/'));
 });
 
 // create a folder img and copy the icons
